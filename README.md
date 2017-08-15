@@ -22,13 +22,13 @@ More specifically, both English One Million 1-gram and 2-gram needs to be loaded
 using our [Java Google Ngram to MySQL tool](https://github.com/TWinters/google-ngrams-to-mysql) in a database following database
 design specified in the repository. Loading this database will take several hours.
 
-3. **Download required repositories**
+3. **Download required repositories:**
 Aside from [our Google Ngram to MySQL converter tool](https://github.com/TWinters/google-ngrams-to-mysql), this framework is also dependent on [our Markov library](https://github.com/TWinters/Markov) and [our DatamuseAPI Java library](https://github.com/TWinters/Datamuse-Java). They should all be cloned and added as a dependency to the project.
 
-You also need to install [Maven](https://maven.apache.org/). After installing Maven, it will download the remaining required dependencies specified in `pom.xml`.
+4. **Install Maven:** You also need to install [Maven](https://maven.apache.org/). After installing Maven, it will download the remaining required dependencies specified in `pom.xml`.
 
 
-4. **Running GAG system:**
+5. **Running GAG system:**
 The GAG system can be executed by using Java to run the main method of the `GeneralisedAnalogyGenerator.java` class.
 It supports following arguments:
 
