@@ -82,7 +82,7 @@ public class GagArguments {
 
 	@Parameter(names = { "-generator",
 			"-g" }, description = "Type of template values generator: sql, datamuse or twogram")
-	private String generatorType = "datamuse";
+	private String generatorType = "twogram";
 
 	/*-********************************************-*
 	 *  Derived
