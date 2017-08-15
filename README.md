@@ -32,8 +32,8 @@ Aside from [our Google Ngram to MySQL converter tool](https://github.com/TWinter
 The GAG system can be executed by using Java to run the main method of the `GeneralisedAnalogyGenerator.java` class.
 It supports following arguments:
 
-| Argument            | Description               |
-| ------------------- |---------------------------|
+| Argument                 | Description               |
+| ------------------------ |---------------------------|
 |-outputModel | Path where the program should output the training model file |
 |-output | Path where the program should output the training model file |
 |-maxSimilarity | If given, GAG will only output generations if it differs enough (no more words similar than this value) from previous generations |
