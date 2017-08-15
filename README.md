@@ -32,25 +32,25 @@ Aside from [our Google Ngram to MySQL converter tool](https://github.com/TWinter
 The GAG system can be executed by using Java to run the main method of the `GeneralisedAnalogyGenerator.java` class.
 It supports following arguments:
 
-| Argument                 | Description               |
-| ------------------------ |---------------------------|
-|-outputModel | Path where the program should output the training model file |
-|-output | Path where the program should output the training model file |
-|-maxSimilarity | If given, GAG will only output generations if it differs enough (no more words similar than this value) from previous generations |
-|-outputWords | Allow the template values in the training model file (classifiers have diffulty dealing with strings though) |
-|-inputJokes | Path to the input jokes file |
-|-sortRating| Whether or not the output should be sorted by their rating |
-|-minScore | Minimal score threshold to be considered a good joke |
-|-sqlHost | Host of the SQL database of the n-grams database |
-|-sqlPost | Port of the SQL database of the n-grams database |
-|-sqlUser | Username of the SQL database of the n-grams database |
-|-sqlPassword | Password of the SQL database of the n-grams database |
-|-sqlDB | Database name of the SQL database of the n-grams database |
-|-dictionary | Path to the WordNet dictionary |
-|-posFile | Path to the Stanford POS tagger |
-|-classifier | The classifier to use to learn from the input jokes |
-|-aggregator | The rating aggregator to combine the ratings with |
-|-x | First template value of an analogy joke |
-|-y | Second template value of an analogy joke |
-|-z | Third template value of an analogy joke |
-|-generator, -g | Type of template values generator: \textit{sql}, \textit{datamuse} or \textit{twogram} |
+| Argument               | Description               |
+| ---------------------- | ------------------------- |
+| -outputModel | Path where the program should output the training model file |
+| -output | Path where the program should output the training model file |
+| -maxSimilarity | If given, GAG will only output generations if it differs enough (no more words similar than this value) from previous generations |
+| -outputWords | Allow the template values in the training model file (classifiers have diffulty dealing with strings though) |
+| -inputJokes | Path to the input jokes file |
+| -sortRating| Whether or not the output should be sorted by their rating |
+| -minScore | Minimal score threshold to be considered a good joke |
+| -sqlHost | Host of the SQL database of the n-grams database |
+| -sqlPost | Port of the SQL database of the n-grams database |
+| -sqlUser | Username of the SQL database of the n-grams database |
+| -sqlPassword | Password of the SQL database of the n-grams database |
+| -sqlDB | Database name of the SQL database of the n-grams database |
+| -dictionary | Path to the WordNet dictionary |
+| -posFile | Path to the Stanford POS tagger |
+| -classifier | The classifier to use to learn from the input jokes |
+| -aggregator | The rating aggregator to combine the ratings with |
+| -x | First template value of an analogy joke |
+| -y | Second template value of an analogy joke |
+| -z | Third template value of an analogy joke |
+| -generator, -g | Type of template values generator: \textit{sql}, \textit{datamuse} or \textit{twogram} |
