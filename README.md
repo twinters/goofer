@@ -2,7 +2,7 @@
 *Generator Of One-liners From Examples with Ratings*
 
 This is a framework for generating humour from examples.
-It was created for my master's thesis "Automatic Joke Generation: Learning Humour from Examples".
+It was created for my master's thesis *"Automatic Joke Generation: Learning Humour from Examples"*.
 
 An implementation of a system relying on this framework is also provided, namely GAG.
 GAG, *Generalised Analogy Generator*, generates "I like my X like I like my Y, Z" jokes from rated examples.
@@ -19,10 +19,16 @@ and [JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads
 In order for GAG to work, [Google Ngrams](https://storage.googleapis.com/books/ngrams/books/datasetsv2.html) needs to be present
 in a MySQL database.
 More specifically, both English One Million 1-gram and 2-gram needs to be loaded in
-using our [Java tool](https://github.com/TWinters/google-ngrams-to-mysql) in a database following database
+using our [Java Google Ngram to MySQL tool](https://github.com/TWinters/google-ngrams-to-mysql) in a database following database
 design specified in the repository. Loading this database will take several hours.
 
-3. **Running GAG system:**
+3. **Download required repositories**
+Aside from [our Google Ngram to MySQL converter tool](https://github.com/TWinters/google-ngrams-to-mysql), this framework is also dependent on [our Markov library](https://github.com/TWinters/Markov) and [our DatamuseAPI Java library](https://github.com/TWinters/Datamuse-Java). They should all be cloned and added as a dependency to the project.
+
+You also need to install [Maven](https://maven.apache.org/). After installing Maven, it will download the remaining required dependencies specified in `pom.xml`.
+
+
+4. **Running GAG system:**
 The GAG system can be executed by using Java to run the main method of the `GeneralisedAnalogyGenerator.java` class.
 It supports following arguments:
 
