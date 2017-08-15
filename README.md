@@ -1,5 +1,5 @@
-# Goofer
-*Generator Of One-liners From Examples with Ratings*
+# GOOFER
+*= Generator Of One-liners From Examples with Ratings*
 
 This is a framework for generating humour from examples.
 It was created for my master's thesis *"Automatic Joke Generation: Learning Humour from Examples"*.
