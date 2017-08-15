@@ -9,7 +9,7 @@ GAG, *Generalised Analogy Generator*, generates "I like my X like I like my Y, Z
 The training data set was collected with our platform, [JokeJudger.com](http://jokejudger.com).
 The [implementation of JokeJudger](https://github.com/TWinters/JokeJudger) as well as the [collected data](https://github.com/TWinters/JokeJudger-Data) are also made available.
 
-# Deploy Generalised Analogy Generator
+## Deploy Generalised Analogy Generator
 
 1. **Setting up Java environment:**
 In order for GAG to work, [Java 8 SE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
@@ -30,10 +30,10 @@ It supports following arguments:
 | --------------- |---------------------------|
 |-outputModel | Path where the program should output the training model file |
 |-output | Path where the program should output the training model file |
-|-maxSimilarity, -maxSim | If given, GAG will only output generations if it differs enough (no more words similar than this value) from previous generations |
+|-maxSimilarity | If given, GAG will only output generations if it differs enough (no more words similar than this value) from previous generations |
 |-outputWords | Allow the template values in the training model file (classifiers have diffulty dealing with strings though) |
 |-inputJokes | Path to the input jokes file |
-|-sortRating, -sort | Wether or not the output should be sorted by their rating |
+|-sortRating| Whether or not the output should be sorted by their rating |
 |-minScore | Minimal score threshold to be considered a good joke |
 |-sqlHost | Host of the SQL database of the n-grams database |
 |-sqlPost | Port of the SQL database of the n-grams database |
