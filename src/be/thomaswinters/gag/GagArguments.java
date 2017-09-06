@@ -164,15 +164,15 @@ public class GagArguments {
 	}
 
 	public Optional<String> getX() {
-		return Optional.ofNullable(x);
+		return Optional.ofNullable(x).map(e->e.trim());
 	}
 
 	public Optional<String> getY() {
-		return Optional.ofNullable(y);
+		return Optional.ofNullable(y).map(e->e.trim());
 	}
 
 	public Optional<String> getZ() {
-		return Optional.ofNullable(z);
+		return Optional.ofNullable(z).map(e->e.trim());
 	}
 	
 	public String getGeneratorType() {

@@ -86,7 +86,7 @@ public class GeneralisedAnalogyGenerator {
 				ratedTemplateValues, knowledgebase.getSchemaMetrics(), arguments.getModelOutputFile());
 
 		// Generate rated template values
-		System.out.println("Generating primitive jokes for template " + partialTemplate);
+		System.out.println("Generating jokes for template values " + partialTemplate);
 
 		Stream<Rating<TemplateValues>> generations = knowledgebase.getValueGenerator().generateStream(partialTemplate)
 				// Classify
