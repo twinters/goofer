@@ -32,12 +32,12 @@ public class RatingAgreementCalculator {
     }
 
     private static double average(Collection<Double> collection) {
-        return collection.stream().mapToDouble(e -> e.doubleValue()).sum() / (double) collection.size();
+        return collection.stream().mapToDouble(e -> e).sum() / (double) collection.size();
     }
 
     public static void main(String[] args) throws IOException {
         JokeJudgerDataParser parser = new JokeJudgerDataParser();
-        List<MultiRating<TemplateValues>> ratings = parser.parse(new File("data/jokejudger/ratings.csv"));
+        List<MultiRating<TemplateValues>> ratings = parser.parse(ClassLoader.getSystemResource("data/jokejudger/ratings.csv"));
         System.out.println(RatingAgreementCalculator.calculate(ratings));
     }
 }

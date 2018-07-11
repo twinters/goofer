@@ -24,6 +24,7 @@ import be.thomaswinters.goofer.metrics.bi.TwoGramSQLMetric;
 import be.thomaswinters.goofer.metrics.uni.*;
 import be.thomaswinters.googlengrams.NgramMySQLConnector;
 import be.thomaswinters.pos.WordTypeCalculator;
+import be.thomaswinters.util.DataLoader;
 import be.thomaswinters.wordcounter.WordCounter;
 import be.thomaswinters.wordcounter.io.WordCounterIO;
 import com.beust.jcommander.ParameterException;
@@ -91,7 +92,7 @@ public class GagKnowledgeBaseBuilder {
         /*-********************************************-*
          *  Erotic word counter
          *-********************************************-*/
-        WordCounter eroWc = WordCounterIO.read(new File("data/textfiles/ero-1gram.txt"));
+        WordCounter eroWc = WordCounterIO.read(ClassLoader.getSystemResource("data/textfiles/ero-1gram.txt"));
         /*-********************************************-*/
 
         /*-********************************************-*

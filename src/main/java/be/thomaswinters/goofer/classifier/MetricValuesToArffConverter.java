@@ -13,6 +13,7 @@ import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -26,21 +27,17 @@ import java.util.Optional;
  */
 public class MetricValuesToArffConverter {
 
-    private final Optional<File> outputFile;
+    private final File outputFile;
 
     /*-********************************************-*
      *  Constructor
      *-********************************************-*/
-    public MetricValuesToArffConverter(Optional<File> outputFile) {
+    public MetricValuesToArffConverter(File outputFile) {
         this.outputFile = outputFile;
     }
 
-    public MetricValuesToArffConverter(File outputFile) {
-        this(Optional.of(outputFile));
-    }
-
     public MetricValuesToArffConverter() {
-        this(Optional.empty());
+        this(null);
     }
     /*-********************************************-*/
 
@@ -140,11 +137,11 @@ public class MetricValuesToArffConverter {
      *  Outputter
      *-********************************************-*/
     public void outputInstances(Instances instances) {
-        if (!outputFile.isPresent()) {
+        if (!Optional.ofNullable(outputFile).isPresent()) {
             return;
         }
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile.get()));
+            BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile));
             writer.write(instances.toString());
             writer.newLine();
             writer.flush();

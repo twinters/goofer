@@ -14,6 +14,7 @@ import weka.filters.Filter;
 import weka.filters.unsupervised.attribute.RemoveType;
 
 import java.io.File;
+import java.net.URL;
 import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
@@ -73,18 +74,18 @@ public class JokeClassifier {
 //	}
 
     public JokeClassifier(Classifier classifier, Template template, Collection<MultiRating<TemplateValues>> ratedJokes,
-                          SchemaMetrics metrics, Optional<File> modelOutputFile)
+                          SchemaMetrics metrics, File modelOutputFile)
             throws Exception {
         this.metrics = metrics;
         this.classifier = createClassifier(classifier, template, ratedJokes, metrics, modelOutputFile);
     }
 
     private Classifier createClassifier(Classifier classifier, Template template,
-                                        Collection<MultiRating<TemplateValues>> ratedJokes, SchemaMetrics metrics, Optional<File> modelOutputFile)
+                                        Collection<MultiRating<TemplateValues>> ratedJokes, SchemaMetrics metrics, File modelOutputFile)
             throws Exception {
 
         // Rate all the jokes
-        List<MetricValues> metricValues = ratedJokes.stream().map(e -> metrics.calculateMetricValues(e))
+        List<MetricValues> metricValues = ratedJokes.stream().map(metrics::calculateMetricValues)
                 .collect(Collectors.toList());
 
         // Convert to instances, so Weka can read it

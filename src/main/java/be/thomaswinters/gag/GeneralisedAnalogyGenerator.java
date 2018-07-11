@@ -14,6 +14,7 @@ import be.thomaswinters.goofer.util.RatingComparators;
 
 import java.io.*;
 import java.net.URISyntaxException;
+import java.net.URL;
 import java.sql.SQLException;
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -85,7 +86,7 @@ public class GeneralisedAnalogyGenerator {
         System.out.println("Reading input jokes");
         JokeJudgerDataParser dataParser = new JokeJudgerDataParser();
         List<MultiRating<TemplateValues>> ratedTemplateValues = new ArrayList<>();
-        for (File file : arguments.getDataInput()) {
+        for (URL file : arguments.getDataInput()) {
             ratedTemplateValues.addAll(dataParser.parse(file));
         }
 

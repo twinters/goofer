@@ -1,19 +1,21 @@
 package be.thomaswinters.gag;
 
-import com.beust.jcommander.Parameter;
-import com.beust.jcommander.converters.FileConverter;
-import edu.mit.jwi.Dictionary;
 import be.thomaswinters.goofer.ratingaggregation.IRatingAggregator;
 import be.thomaswinters.goofer.ratingaggregation.ModeRatingAggregator;
 import be.thomaswinters.goofer.util.argumentconverter.ClassifierConverter;
 import be.thomaswinters.goofer.util.argumentconverter.RatingAggregatorConverter;
 import be.thomaswinters.goofer.util.argumentconverter.SemiColonSplitter;
+import com.beust.jcommander.Parameter;
+import com.beust.jcommander.converters.FileConverter;
+import com.beust.jcommander.converters.URLConverter;
+import edu.mit.jwi.Dictionary;
 import weka.classifiers.Classifier;
 import weka.classifiers.trees.RandomForest;
 
 import java.io.File;
 import java.io.IOException;
-import java.util.Arrays;
+import java.net.URL;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -24,7 +26,7 @@ import java.util.Optional;
  */
 public class GagArguments {
 
-    @Parameter(names = "-outputModel", description = "Path where the program should output the training model file", converter = FileConverter.class)
+    @Parameter(names = "-outputModel", description = "Path where the program should output the training model file", converter = URLConverter.class)
     private File modelOutputFile = new File("out/model.arff");
 
     @Parameter(names = "-output", description = "Path where the program should output the training model file", converter = FileConverter.class)
@@ -34,11 +36,11 @@ public class GagArguments {
             "-maxSim"}, description = "If given, GAG will only output generations if it differs enough (no more words similar than this value) from previous generations")
     private int maxSimilarity = -1;
 
-    @Parameter(names = "-outputWords", description = "Allow the template values in the training model file: classifiers have diffulty dealing with strings though!", converter = FileConverter.class)
+    @Parameter(names = "-outputWords", description = "Allow the template values in the training model file: classifiers have diffulty dealing with strings though!", converter = URLConverter.class)
     private boolean outputWords = false;
 
-    @Parameter(names = "-inputJokes", description = "Path to the input jokes file", converter = FileConverter.class, splitter = SemiColonSplitter.class)
-    private List<File> dataInput = Arrays.asList(new File("data/jokejudger/training-data.csv"));
+    @Parameter(names = "-inputJokes", description = "Path to the input jokes file", converter = URLConverter.class, splitter = SemiColonSplitter.class)
+    private List<URL> dataInput = Collections.singletonList(ClassLoader.getSystemResource("data/jokejudger/training-data.csv"));
 
     @Parameter(names = {"-sortRating",
             "-sort"}, description = "Wether or not the output should be sorted by their rating")
@@ -58,8 +60,8 @@ public class GagArguments {
     @Parameter(names = "-sqlDB", description = "Database name of the SQL database of the n-grams database")
     private String sqlDatabaseName = "ngram";
 
-    @Parameter(names = "-dictionary", description = "Path to the WordNet dictionary", converter = FileConverter.class)
-    private File dictionaryFile = new File("./data/wordnet/");
+    @Parameter(names = "-dictionary", description = "Path to the WordNet dictionary", converter = URLConverter.class)
+    private URL dictionaryFile = ClassLoader.getSystemResource("data/wordnet/");
 
     @Parameter(names = "-posFile", description = "Path to the Stanford POS tagger")
     private String posTaggerFile = "data/stanford-pos/english-bidirectional-distsim.tagger";
@@ -93,11 +95,11 @@ public class GagArguments {
     /*-********************************************-*
      *  Getters
      *-********************************************-*/
-    public Optional<File> getModelOutputFile() {
-        return modelOutputFile == null ? Optional.empty() : Optional.of(modelOutputFile);
+    public File getModelOutputFile() {
+        return modelOutputFile;
     }
 
-    public List<File> getDataInput() {
+    public List<URL> getDataInput() {
         return dataInput;
     }
 
@@ -129,7 +131,7 @@ public class GagArguments {
         return sqlDatabaseName;
     }
 
-    public File getDictionaryFile() {
+    public URL getDictionaryFile() {
         return dictionaryFile;
     }
 
@@ -163,15 +165,15 @@ public class GagArguments {
     }
 
     public Optional<String> getX() {
-        return Optional.ofNullable(x).map(e -> e.trim());
+        return Optional.ofNullable(x).map(String::trim);
     }
 
     public Optional<String> getY() {
-        return Optional.ofNullable(y).map(e -> e.trim());
+        return Optional.ofNullable(y).map(String::trim);
     }
 
     public Optional<String> getZ() {
-        return Optional.ofNullable(z).map(e -> e.trim());
+        return Optional.ofNullable(z).map(String::trim);
     }
 
     public String getGeneratorType() {
