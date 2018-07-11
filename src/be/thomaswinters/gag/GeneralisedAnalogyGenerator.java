@@ -11,7 +11,6 @@ import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import com.beust.jcommander.JCommander;
@@ -110,7 +109,7 @@ public class GeneralisedAnalogyGenerator {
 		BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(fos));
 
 		generations.map(e -> df.format(e.getRating()) + "\t"
-				+ e.getElement().getValues().stream().collect(Collectors.joining("\t"))).forEach(e -> {
+				+ AnalogyTemplateStripper.TEMPLATE.apply(e.getElement())).forEach(e -> {
 					System.out.println(e);
 					try {
 						bw.write(e + "\n");
@@ -137,8 +136,12 @@ public class GeneralisedAnalogyGenerator {
 		GeneralisedAnalogyGenerator gag = new GeneralisedAnalogyGenerator(gagArguments);
 
 		// Generate
-		gag.generateAnalogies(new PartialTemplateValues(
-				Arrays.asList(gagArguments.getX(), gagArguments.getY(), gagArguments.getZ())));
+		try {
+			gag.generateAnalogies(new PartialTemplateValues(
+					Arrays.asList(gagArguments.getX(), gagArguments.getY(), gagArguments.getZ())));
+		} catch (OutOfMemoryError e) {
+			System.out.println("Out of memory.");
+		}
 	}
 
 }
