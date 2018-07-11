@@ -1,2 +1,10 @@
+include ':datamuse-java'
+project(':datamuse-java').projectDir = new File(settingsDir, '../datamuse-java')
+include ':google-ngrams-to-mysql'
+project(':google-ngrams-to-mysql').projectDir = new File(settingsDir, '../google-ngrams-to-mysql')
+include ':text-util'
+project(':text-util').projectDir = new File(settingsDir, '../text-util')
+include ':generator-util'
+project(':generator-util').projectDir = new File(settingsDir, '../generator-util')
 rootProject.name = 'goofer'
 

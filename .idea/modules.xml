@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/604709017/Repositories-generator-util.iml" filepath="$PROJECT_DIR$/.idea/modules/604709017/Repositories-generator-util.iml" group="generator-util" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/507190712/Repositories-google-ngrams-to-mysql.iml" filepath="$PROJECT_DIR$/.idea/modules/507190712/Repositories-google-ngrams-to-mysql.iml" group="google-ngrams-to-mysql" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1314248658/datamuse-java.iml" filepath="$PROJECT_DIR$/.idea/modules/-1314248658/datamuse-java.iml" group="datamuse-java" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1314248658/datamuse-java_main.iml" filepath="$PROJECT_DIR$/.idea/modules/-1314248658/datamuse-java_main.iml" group="datamuse-java" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1314248658/datamuse-java_test.iml" filepath="$PROJECT_DIR$/.idea/modules/-1314248658/datamuse-java_test.iml" group="datamuse-java" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/604709017/generator-util_main.iml" filepath="$PROJECT_DIR$/.idea/modules/604709017/generator-util_main.iml" group="generator-util" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/604709017/generator-util_test.iml" filepath="$PROJECT_DIR$/.idea/modules/604709017/generator-util_test.iml" group="generator-util" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/goofer.iml" filepath="$PROJECT_DIR$/.idea/modules/goofer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/goofer_main.iml" filepath="$PROJECT_DIR$/.idea/modules/goofer_main.iml" group="goofer" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/goofer_test.iml" filepath="$PROJECT_DIR$/.idea/modules/goofer_test.iml" group="goofer" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/507190712/google-ngrams-to-mysql_main.iml" filepath="$PROJECT_DIR$/.idea/modules/507190712/google-ngrams-to-mysql_main.iml" group="google-ngrams-to-mysql" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/507190712/google-ngrams-to-mysql_test.iml" filepath="$PROJECT_DIR$/.idea/modules/507190712/google-ngrams-to-mysql_test.iml" group="google-ngrams-to-mysql" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-60019547/text-util.iml" filepath="$PROJECT_DIR$/.idea/modules/-60019547/text-util.iml" group="text-util" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-60019547/text-util_main.iml" filepath="$PROJECT_DIR$/.idea/modules/-60019547/text-util_main.iml" group="text-util" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-60019547/text-util_test.iml" filepath="$PROJECT_DIR$/.idea/modules/-60019547/text-util_test.iml" group="text-util" />
+    </modules>
+  </component>
+</project>

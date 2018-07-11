@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="datamuse-java_main" target="1.8" />
+      <module name="datamuse-java_test" target="1.8" />
+      <module name="generator-util_main" target="1.9" />
+      <module name="generator-util_test" target="1.9" />
+      <module name="goofer_main" target="1.8" />
+      <module name="goofer_test" target="1.8" />
+      <module name="google-ngrams-to-mysql_main" target="1.8" />
+      <module name="google-ngrams-to-mysql_test" target="1.8" />
+      <module name="text-util_main" target="1.9" />
+      <module name="text-util_test" target="1.9" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
