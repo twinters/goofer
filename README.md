@@ -16,19 +16,32 @@ In order for GAG to work, [Java 8 SE](http://www.oracle.com/technetwork/java/jav
 and [JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) needs to be installed.
 We also recommend using [IntellIJ](https://www.jetbrains.com/idea/) for opening the code.
 
-2. **Setting up required Google N-gram databases:**
+2. **Download required repositories:**
+Aside from [our Google Ngram to MySQL converter tool](https://github.com/TWinters/google-ngrams-to-mysql),
+this framework is also dependent on [our text-util repository](https://github.com/TWinters/text-util),
+[our generator-util repository](https://github.com/TWinters/generator-util)
+and [our DatamuseAPI Java library](https://github.com/TWinters/datamuse-java).
+They should all be cloned and put in a folder next to the `goofer` folder.
+
+3. **Setting up required Google N-gram databases:**
 In order for GAG to work, [Google Ngrams](https://storage.googleapis.com/books/ngrams/books/datasetsv2.html) needs to be present
 in a MySQL database.
 More specifically, both English One Million 1-gram and 2-gram needs to be loaded in
 using our [Java Google Ngram to MySQL tool](https://github.com/TWinters/google-ngrams-to-mysql) in a database following database
 design specified in the repository. Loading this database will take several hours.
 
-3. **Download required repositories:**
-Aside from [our Google Ngram to MySQL converter tool](https://github.com/TWinters/google-ngrams-to-mysql),
-this framework is also dependent on [our text-util repository](https://github.com/TWinters/text-util),
-[our generator-util repository](https://github.com/TWinters/generator-util)
-and [our DatamuseAPI Java library](https://github.com/TWinters/Datamuse-Java).
-They should all be cloned and put in a folder next to the `goofer` folder.
+We recommend the following steps:
+* Create a database called `ngram` using a MySQL server such as WAMP.
+* Forward engineering the `database-model.mwb`-file to this database, e.g. using MySQL workbench.
+* Load the database using our [google-ngrams-to-mysql](https://github.com/TWinters/google-ngrams-to-mysql) tool using
+the following arguments (don't forget to add arguments to link to your database if this is different from a localhost database called `ngram`):
+
+For 1-grams:
+`-folder [FOLDER_OF_UNZIPPED_NGRAM_CSVS] -filePrefix googlebooks-eng-1M-1gram-20090715- -n 1 -allowedRegex lowercase -endIndex 10`
+
+For 2-grams:
+`-folder [FOLDER_OF_UNZIPPED_NGRAM_CSVS] -filePrefix googlebooks-eng-1M-2gram-20090715- -n 2 -allowedRegex lowercase -endIndex 100 -constrainer adjectivenoun`
+
 
 4. **Install Gradle:** You also need  [Gradle](https://gradle.org/) to download all dependencies from `build.gradle`.
 This is built-in in IntellIJ and thus should work out of the box when using that environment.
