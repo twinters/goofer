@@ -28,7 +28,8 @@ public class RelativeUniMetric implements IUniArgumentMetric {
         if (!first.isPresent() || !second.isPresent()) {
             return Optional.empty();
         }
-        return Optional.of( ((double) first.get() + 1) / ((double) second.get() + 1));
+        double result = ((Double) first.get() + 1) / ((Double) second.get() + 1);
+        return Optional.of(result);
     }
 
 }
