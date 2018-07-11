@@ -14,6 +14,7 @@ The [implementation of JokeJudger](https://github.com/TWinters/JokeJudger) as we
 1. **Setting up Java environment:**
 In order for GAG to work, [Java 8 SE](http://www.oracle.com/technetwork/java/javase/downloads/jre8-downloads-2133155.html)
 and [JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) needs to be installed.
+We also recommend using [IntellIJ](https://www.jetbrains.com/idea/) for opening the code.
 
 2. **Setting up required Google N-gram databases:**
 In order for GAG to work, [Google Ngrams](https://storage.googleapis.com/books/ngrams/books/datasetsv2.html) needs to be present
@@ -23,9 +24,14 @@ using our [Java Google Ngram to MySQL tool](https://github.com/TWinters/google-n
 design specified in the repository. Loading this database will take several hours.
 
 3. **Download required repositories:**
-Aside from [our Google Ngram to MySQL converter tool](https://github.com/TWinters/google-ngrams-to-mysql), this framework is also dependent on [our Markov library](https://github.com/TWinters/Markov) and [our DatamuseAPI Java library](https://github.com/TWinters/Datamuse-Java). They should all be cloned and added as a dependency to the project.
+Aside from [our Google Ngram to MySQL converter tool](https://github.com/TWinters/google-ngrams-to-mysql),
+this framework is also dependent on [our text-util repository](https://github.com/TWinters/text-util),
+[our generator-util repository](https://github.com/TWinters/generator-util)
+and [our DatamuseAPI Java library](https://github.com/TWinters/Datamuse-Java).
+They should all be cloned and put in a folder next to the `goofer` folder.
 
-4. **Install Maven:** You also need to install [Maven](https://maven.apache.org/). After installing Maven, it will download the remaining required dependencies specified in `pom.xml`.
+4. **Install Gradle:** You also need  [Gradle](https://gradle.org/) to download all dependencies from `build.gradle`.
+This is built-in in IntellIJ and thus should work out of the box when using that environment.
 
 
 5. **Running GAG system:**
