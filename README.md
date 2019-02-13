@@ -9,6 +9,26 @@ GAG, *Generalised Analogy Generator*, generates "I like my X like I like my Y, Z
 The training data set was collected with our platform, [JokeJudger.com](http://jokejudger.com).
 The [implementation of JokeJudger](https://github.com/TWinters/JokeJudger) as well as the [collected data](https://github.com/TWinters/JokeJudger-Data) are also made available.
 
+## Citing this work
+
+If you want to reference this work, you can use [this BibTex file](https://github.com/TWinters/goofer/blob/master/reference.bib).
+```
+@inproceedings{winters:automaticjokegeneration:2018,
+	issn = {0302-9743},
+	journal = {Distributed, Ambient and Pervasive Interactions: Technologies and Contexts},
+	pages = {360--377},
+	volume = {10922 LNCS},
+	publisher = {Springer International Publishing},
+	isbn = {9783319911304},
+	year = {2018},
+	title = {Automatic joke generation: Learning humor from examples},
+	language = {eng},
+	author = {Winters, Thomas and Nys, Vincent and De Schreye, Danny},
+	keywords = {Computational humor},
+	organization = {Streitz, Norbert}
+}
+```
+
 ## Deploy Generalised Analogy Generator
 
 1. **Setting up Java environment:**
