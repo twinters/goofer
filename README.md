@@ -92,4 +92,4 @@ It supports following arguments:
 | -x | First template value of an analogy joke |
 | -y | Second template value of an analogy joke |
 | -z | Third template value of an analogy joke |
-| -generator, -g | Type of template values generator: \textit{sql}, \textit{datamuse} or \textit{twogram} |
+| -generator, -g | Type of template values generator: *sql*, *datamuse* or *twogram* |
