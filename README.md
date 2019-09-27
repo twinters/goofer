@@ -13,7 +13,7 @@ The [implementation of JokeJudger](https://github.com/TWinters/JokeJudger) as we
 
 If you want to reference this work, you can use [this BibTex file](https://github.com/TWinters/goofer/blob/master/reference.bib).
 ```
-@inproceedings{winters:automaticjokegeneration:2018,
+@inproceedings{winters2018automaticjokegeneration,
 	issn = {0302-9743},
 	journal = {Distributed, Ambient and Pervasive Interactions: Technologies and Contexts},
 	pages = {360--377},
