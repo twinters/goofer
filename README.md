@@ -14,18 +14,18 @@ The [implementation of JokeJudger](https://github.com/TWinters/JokeJudger) as we
 If you want to reference this work, you can use [this BibTex file](https://github.com/TWinters/goofer/blob/master/reference.bib).
 ```
 @inproceedings{winters2018automaticjokegeneration,
-	issn = {0302-9743},
-	journal = {Distributed, Ambient and Pervasive Interactions: Technologies and Contexts},
-	pages = {360--377},
-	volume = {10922 LNCS},
-	publisher = {Springer International Publishing},
-	isbn = {9783319911304},
-	year = {2018},
-	title = {Automatic joke generation: Learning humor from examples},
-	language = {eng},
-	author = {Winters, Thomas and Nys, Vincent and De Schreye, Danny},
-	keywords = {Computational humor},
-	organization = {Streitz, Norbert}
+    issn = {0302-9743},
+    journal = {Distributed, Ambient and Pervasive Interactions: Technologies and Contexts},
+    pages = {360--377},
+    volume = {10922 LNCS},
+    publisher = {Springer International Publishing},
+    isbn = {9783319911304},
+    year = {2018},
+    title = {Automatic joke generation: Learning humor from examples},
+    language = {eng},
+    author = {Winters, Thomas and Nys, Vincent and De Schreye, Danny},
+    keywords = {Computational humor},
+    organization = {Streitz, Norbert}
 }
 ```
 
